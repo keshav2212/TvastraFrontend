@@ -11,9 +11,6 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
-    primary: {
-      main: '#1976d2',
-    },
   },
 });
 
@@ -31,10 +28,11 @@ export default function Header() {
           <Box
         component="img"
         sx={{
-          width: 170,
+          width: 100,
           marginTop: 1,
+          marginLeft: 3
         }}
-        src={require('../static/img/logo.png')}
+        src={require('../../static/img/logo.png')}
       />
           </Typography>
           <nav>
