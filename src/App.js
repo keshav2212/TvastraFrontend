@@ -1,12 +1,12 @@
-import Header from './components/Header/Header';
+import "./App.css";
 import Footer from './components/Footer/Footer';
-import "./App.css" 
-import LandingPage from './components/LandingPage/LandingPage';
+import Header from './components/Header/Header';
+import RootRouter from './components/Router/RootRouter';
 function App() {
   return (
     <div className="App">
       <Header />
-      <LandingPage />
+      <RootRouter />
       <Footer />
     </div>
   );
