@@ -14,8 +14,6 @@ const RootRouter = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={LandingPage} />       
-      </Switch>
-      <Switch>
         <Route exact path="/login" component={Login} />       
       </Switch>
       
