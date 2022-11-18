@@ -1,3 +1,5 @@
 fileignoreconfig:
-- filename: package-lock.json
-  checksum: b18b01bfdf11ce2c4950d5d2da058a9b6931ee2d5a151ada00b30d31f0e5a46c
+- filename: yarn.lock
+  checksum: 13fc71d5554da3230d93f5f47a766ff7072f5d7c8293ae59f628ebbe7206968c
+- filename: src/components/LandingPage/ArtSlider.js
+  checksum: f7942549af1e27c9772ea9b4ff3821d2dc60e803993f09238150a6a61068d493
