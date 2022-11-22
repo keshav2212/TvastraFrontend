@@ -47,7 +47,7 @@ function ArtSlider() {
   };
 
   return (
-    <Box sx={{ maxWidth: 1750, flexGrow: 1 }}>
+    <Box sx={{ maxWidth: 1750, flexGrow: 1, paddingBottom: 4 }}>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
