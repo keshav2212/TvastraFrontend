@@ -29,76 +29,7 @@ describe("Basic logic", () => {
         const actualUserDetails = await login(testUsername, testPassword);
 
         expect(actualUserDetails).toBe("userDetails");
-       // expect(sessionStorage.getItem("skyfox_token")).toBe(expectedToken);
     });
-
-    // it("should not set auth header if not logged in", async () => {
-    //     const testConfig = {
-    //         headers: {
-    //             Authorization: 'Basic testUsername:testPassword'
-    //         }
-    //     };
-    //     when(axios.get)
-    //         .calledWith(`${urls.service}/login`, testConfig)
-    //         .mockRejectedValue("unused");
-
-    //     try {
-    //         await login(testUsername, testPassword);
-    //         fail("Should not login successfuly");
-    //     } catch (e) {
-    //         expect(sessionStorage.getItem("skyfox_token")).toBe(null);
-    //     }
-    // });
-
-    // it("should return correct auth header", async () => {
-    //     const testConfig = {
-    //         headers: {
-    //             Authorization: 'Basic testUsername:testPassword'
-    //         }
-    //     };
-    //     when(axios.get)
-    //         .calledWith(`${urls.service}/login`, testConfig)
-    //         .mockResolvedValue("unused");
-
-    //     await login(testUsername, testPassword);
-    //     const actualAuthHeader = authHeader();
-
-    //     expect(actualAuthHeader).toEqual(testConfig);
-    // });
-
-    // it("should return if user is logged in correctly", async () => {
-    //     const testConfig = {
-    //         headers: {
-    //             Authorization: 'Basic testUsername:testPassword'
-    //         }
-    //     };
-    //     when(axios.get)
-    //         .calledWith(`${urls.service}/login`, testConfig)
-    //         .mockResolvedValue("unused");
-
-    //     await login(testUsername, testPassword);
-    //     const actualIsLoggedIn = isLoggedIn();
-
-    //     expect(actualIsLoggedIn).toBe(true);
-    // });
-
-    // it("should logout user successfuly", async () => {
-    //     const testConfig = {
-    //         headers: {
-    //             Authorization: 'Basic testUsername:testPassword'
-    //         }
-    //     };
-    //     when(axios.get)
-    //         .calledWith(`${urls.service}/login`, testConfig)
-    //         .mockResolvedValue("unused");
-
-    //     await login(testUsername, testPassword);
-    //     logout();
-    //     const actualIsLoggedIn = isLoggedIn();
-
-    //     expect(actualIsLoggedIn).toBe(false);
-    //     expect(sessionStorage.getItem("skyfox_token")).toBe(null);
-    // });
 
     afterEach(() => {
         sessionStorage.removeItem("token");
