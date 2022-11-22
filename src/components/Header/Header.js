@@ -14,7 +14,18 @@ const darkTheme = createTheme({
   },
 });
 
-export default function Header() {
+
+
+export default function Header({onLogout, isAuthenticated}) {
+
+  const SigninOrSignOut = () => {
+    const login = <Link underline="none" variant="button" href="/signin" sx={{ my: 1, mx: 1.5 }} > Signin </Link>
+    const logout = <Link underline="none" variant="button" href="/signout" sx={{ my: 1, mx: 1.5 }} > Signout </Link>
+    return (
+      isAuthenticated?logout:login
+    )
+  }
+
   return (
     <ThemeProvider theme={darkTheme}>
     <AppBar
@@ -40,7 +51,7 @@ export default function Header() {
               variant="button"
               underline="none"
               color="text.primary"
-              href="#"
+              href="/"
               sx={{ my: 1, mx: 1.5 }}
             >
               Home
@@ -63,14 +74,7 @@ export default function Header() {
             >
               About Us
             </Link>
-            <Link
-              underline="none"
-              variant="button"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-            >
-             Login
-            </Link>
+            {SigninOrSignOut()}
           </nav>
         </Toolbar>
       </AppBar>
